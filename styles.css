@@ -58,9 +58,9 @@ body {
   border: 2px solid white;
   border-radius: 40px;
   color: white;
-  padding: 40px 48px 30px;
+  padding: 40px 88px 30px;
   min-height: 700px;
-  width: 300px;
+  width: 600px;
   display: flex;
   justify-content:center;
   flex-direction: column;
