@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Chat</title>
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="styles.css">
     <!-- Carga el núcleo de Firebase JS SDK -->
     <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
     <!-- Agrega el manejo de autenticación. -->
@@ -14,14 +14,20 @@
     <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
     <script src="js/init.js"></script>
   </head>
-  
+
   <body>
-    <h1>Chat</h1>
-    <form action="javascript:agrega();">
-      <input id="texto" type="text" required placeholder="Mensaje">
-      <button>Enviar</button>
-    </form>
-    <ol id="mensajes"><li><progress max="100">Cargando…</progress></li></ol>
+
+    <section class="chat">
+      <section class="chat__container">
+        <h1>Chat</h1>
+      <form action="javascript:agrega();">
+        <input id="texto" type="text" required placeholder="Mensaje" class="input">
+        <button class="button">Enviar</button>
+      </form>
+      <ol id="mensajes"><li><progress max="100">Cargando…</progress></li></ol>
+    </section>
+    </section>
+    
     <script>
       // @ts-check
       /** Nombre de usuario atenticado por Firebase. */
@@ -137,5 +143,6 @@
         return (texto || "").replace(/[&<>"']/g, letra => codMap.get(letra));
       }
     </script>
+    
   </body>
 </html>
